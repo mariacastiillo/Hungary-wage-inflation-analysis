@@ -26,18 +26,23 @@ In 2023, Hungary’s inflation surged to 17.6%. For organizations and policymake
 ```sql
 SELECT 
   s.Year, 
-  s.Avg_Salary_Index AS Salary_Index, 
-  i.Total_CPI AS Inflation_Index,
-  ROUND(s.Avg_Salary_Index - i.Total_CPI, 2) AS Real_Growth_Gap
-FROM `hungary_economy.Salaries` AS s
-JOIN `hungary_economy.inflation_data` AS i ON s.Year = i.Year
-ORDER BY 1;
+  s.Avg_Salary_Index, 
+  i.Total_CPI,
+  ROUND(s.Avg_Salary_Index - i.Total_CPI, 2) AS Real_Growth
+FROM 
+  `gee-course-465115.hungary_economy.Salaries` AS s
+JOIN 
+  `gee-course-465115.hungary_economy.inflation_data` AS i 
+  ON s.Year = i.Year
+ORDER BY 
+  s.Year ASC
 ```
 ## 5. Results & Analysis
 * **The 2023 Deficit:** Despite a 14% nominal wage increase, the 17.6% inflation rate created a negative real growth of -3.6%, marking the most significant wealth contraction in the analyzed period.
 * **Electoral Cycle Peak:** Analysis confirms that 2022 (election year) saw the highest nominal wage spike (+17.6%), which was later neutralized by the 2023 post-election inflationary surge.
 * **Recovery (2024):** A sharp 9.5% rebound in real growth suggests successful economic stabilization and a restoration of consumer confidence.
-
+![Purchasing Power Analysis Chart](chart.2.png)
+*Figure 1: Comparison between Wage Growth and Total CPI (Inflation) in Hungary (2014-2025).*
 ---
 
 ## 6. Business Recommendation
