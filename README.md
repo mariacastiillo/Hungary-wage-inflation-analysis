@@ -48,3 +48,5 @@ ORDER BY
 ## 6. Business Recommendation
 Based on the -3.6% contraction identified in 2023, organizations should anticipate upward pressure on wage demands as labor markets seek to recover lost purchasing power. For strategic fiscal planning, I recommend indexing long-term salary budgets against a 3-year rolling average of the CPI to mitigate the impact of volatile inflation spikes and maintain operational stability.
 
+## Author
+**María Castillo**
