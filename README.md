@@ -1,28 +1,25 @@
 # Purchasing Power Analysis: Wages vs. Inflation in Hungary (2014-2025)
 
-## Executive Summary
-* **Business Problem:** Hungary faced record-breaking inflation in 2023, raising the question: Did wage increases during election cycles protect citizen wealth, or did they fuel a cost-of-living crisis?
-* **Solution:** A cloud-based analytical model (BigQuery) that correlates CPI (Inflation) and Wage indices to calculate the "Real Growth Gap."
-* **Key Steps:** Data extraction (KSH), ETL/Sanitization (Excel), Relational Modeling (SQL), and Trend Visualization.
-* **Impact:** Identified a 3.6% net loss in purchasing power for 2023, providing a data-driven baseline for future fiscal strategy and labor cost forecasting.
+## 1. Executive Summary
+This project quantifies the impact of record-breaking inflation on Hungarian household wealth. By correlating CPI and Wage indices, the analysis identifies the "Real Growth Gap," revealing how purchasing power was neutralized by economic volatility despite nominal salary increases.
 
 ---
 
-## 1. Business Problem
-In 2023, Hungary’s inflation surged to 17.6%. For organizations and policymakers, nominal wage growth figures were misleading. The goal of this project was to quantify the "Real Growth"—the actual purchasing power remaining after accounting for inflation—to identify the true economic impact on the population and business environments.
+## 2. The Tech Stack
+* **SQL:** Google BigQuery
+* **Data Cleaning:** Microsoft Excel
+* **Visualization:** Python (Matplotlib/Seaborn)
+* **Data Source:** Hungarian Central Statistical Office (KSH)
 
-## 2. Methodology
-1. **Extraction:** Raw data acquisition from the Hungarian Central Statistical Office (KSH).
-2. **Cleaning (ETL):** Used Microsoft Excel for delimiter normalization (`;`), header translation, and data type casting.
-3. **Processing:** Implemented SQL JOINs in Google BigQuery to unify independent datasets into a single analytical view.
+---
 
-## 3. Skills Demonstrated
-* Cloud Data Warehousing (BigQuery)
-* ETL & Data Cleaning (Excel)
-* Macroeconomic KPI Calculation
-* SQL Relational Logic
+## 3. Business Problem
+In 2023, Hungary’s inflation reached a peak of 17.6%. For policymakers and businesses, nominal wage growth figures were misleading. This study identifies the "Real Growth"—the actual purchasing power remaining—to provide a data-driven baseline for future fiscal strategy and labor cost forecasting.
 
-## 4. SQL Implementation
+---
+
+## 4. Technical Process: SQL Implementation
+I implemented a relational model in BigQuery to unify independent salary and inflation datasets, calculating the net economic impact per year.
 ```sql
 SELECT 
   s.Year, 
